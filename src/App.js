@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Principal from './components/principal';
+import Secundario from './components/secundario';
+import {  BrowserRouter as Router,
+   Route, Switch, Redirect
+} from "react-router-dom";
+import {MuiPickersUtilsProvider} from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
+import moment from 'moment';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiPickersUtilsProvider utils={MomentUtils} locale="es" moment={moment}>
+    <Router>
+
+        <Redirect
+            from="/"
+            to="/principal" />
+
+<Switch>
+            <Route path="/principal" component={Principal}/>
+            <Route path="/secundario" component={Secundario}/>
+
+
+        </Switch>
+    </Router>
+    </MuiPickersUtilsProvider>
   );
 }
 
