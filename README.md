@@ -7,7 +7,7 @@ When you are in your program use "npm install".
 
 Then you need to install:
 
-  npm install --save react-chartjs-2 chart.js
+ 	npm install --save react-chartjs-2 chart.js
   
 	npm moment
   
