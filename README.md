@@ -1,4 +1,6 @@
 # Excersice-Oktana
+In GitHub go to branch master.
+
 For the use of this program, you need to download the program.
 
 Go to your repository (cmd) and enter in your program. (Example: cd Program)
